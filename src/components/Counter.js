@@ -1,9 +1,14 @@
+import { generateUniqueId } from "./Unique_id.js";
+
 //resuable piece of code and ui
 
 class Counter{
-    constructor(count){
+    constructor(){
         this.count=0;
-    }
+        this.counterValueid=generateUniqueId({prefix:"counterValue"});
+        this.mounted=false;
+
+    };
 
 
 incrementCount(){
@@ -22,7 +27,7 @@ this.updateCount();
 }
 updateCount(){
 
-document.getElementById("counterValue").innerText=`count:${this.count}`
+document.getElementById(this.counterValueid).innerText=`count:${this.count}`
 
 }
 
@@ -39,10 +44,9 @@ const decrementButton=document.createElement("button");
 
 counterContainer.classList.add("counterContainer");
 counterHeading.classList.add("counterHeading");
-counterValue.id="counterValue";
-incrementButton.id="increment";
-decrementButton.id="decrement";
-
+counterValue.id=this.counterValueid;
+incrementButton.id=generateUniqueId({prefix:"increbutton"});
+decrementButton.id=generateUniqueId({prefix:"decrebutton"});
 
 counterHeading.innerText="Counter Component";
 counterValue.innerText=`count:${this.count}`;
@@ -72,11 +76,13 @@ return counterContainer;
 }
 mount(el){
 
-    //adding an HTML Component on the dOM
 
-    //check if el is passed
-    //if yes:append container to el as child
-    //else append container to body as child
+    //to create single instance of class
+    if(this.mounted){
+        return;
+    }
+    this.mounted=true;
+
     if(el){
         el.appendChild(this.render());
 
@@ -84,10 +90,6 @@ mount(el){
     }
 
 
-    //document.querySelector {'body'}.appendChild
-
-    //this --instance created by the class
-    //represents the variable/object created at runtime
 
     document.body.appendChild(this.render());
     return;

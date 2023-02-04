@@ -1,0 +1,21 @@
+.body_color{
+
+
+    background: rgb(231, 214, 190);
+}
+.totalContainer{
+
+
+        background: pink;
+        border: 3px solid rgb(174, 80, 13);
+        border-radius: 8px;
+        width: 270px;
+        height:10vh;
+        text-align: center;
+        padding: 15px;
+        margin: auto;
+        margin-top: 50px;
+        box-shadow: 10px 5px 5px grey;
+    
+    
+}

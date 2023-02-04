@@ -1,0 +1,43 @@
+
+.blue{
+
+    background: rgb(190, 224, 233);
+}
+
+.counterContainer{
+    background: rgb(235, 182, 228);
+    border: 3px solid rgb(174, 80, 13);
+    border-radius: 8px;
+    width: 270px;
+    height:40vh;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 10px 5px 5px grey;
+
+}
+.counterHeading{
+    color: rgb(229, 48, 84);
+}
+
+#countValue{
+    color: darkmagenta;
+    font: 1em sans-serif;
+}
+#increment{
+   background-color: blanchedalmond;
+   margin: 4px 2px;
+   /*width: 10px;*/
+   padding: 15px 22px;
+   display: inline-block;
+
+}
+#decrement{
+    background-color: blanchedalmond;
+    margin: 4px 2px;
+    /*width: 10px;*/
+    padding: 15px 22px;
+    display: inline-block;
+ 
+ }
