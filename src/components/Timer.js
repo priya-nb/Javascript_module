@@ -37,11 +37,7 @@ class Timer{
         this.minutes=Math.floor((this.count1/100)/60);
         this.seconds=Math.floor((this.count1/100)-(this.minutes*60));
         this.miliseconds=Math.floor(this.count1-(this.seconds*100)-(this.minutes*6000));
-    /*
-    
-        document.getElementById("minutes").innerText=this.minutes+":";
-        document.getElementById("seconds").innerText=this.seconds+":";
-        document.getElementById("miliseconds").innerText=this.miliseconds;*/
+   
     
             
         document.getElementById(this.minutesid).innerText=this.minutes+":";
@@ -97,13 +93,7 @@ resetButton(){
      this.seconds=0;
      this.miliseconds=0;
      this.timerRunning=false;
-    /*
-    document.getElementById("minutes").innerText=(this.minutes)+":";
-    document.getElementById("seconds").innerText=(this.seconds)+":";
-    document.getElementById("miliseconds").innerText=(this.miliseconds);
-
-
-    */
+  
 
 
     document.getElementById(this.minutesid).innerText=(this.minutes)+":";
@@ -136,9 +126,7 @@ const rstButton=document.createElement("button");
  timerContainer.classList.add("timerContainer");
  card_heading.classList.add("card_heading");
  display_time.classList.add("display_time");
- /*Minutes.id="minutes";
- Seconds.id="seconds";
- Miliseconds.id="miliseconds";*/
+
   Minutes.id=this.minutesid;
  Seconds.id=this.secondsid;
  Miliseconds.id=this.milisecondsid;
